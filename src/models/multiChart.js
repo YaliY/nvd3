@@ -16,6 +16,8 @@ nv.models.multiChart = function() {
       },
       x,
       y,
+      forceY1=[],
+      forceY2=[],
       yDomain1,
       yDomain2
       ; //can be accessed via chart.lines.[x/y]Scale()
@@ -197,10 +199,10 @@ nv.models.multiChart = function() {
         return a.map(function(aVal,i){return {x: aVal.x, y: aVal.y + b[i].y}})
       }).concat([{x:0, y:0}]) : []
 
-      yScale1 .domain(yDomain1 || d3.extent(d3.merge(series1).concat(extraValue1), function(d) { return d.y } ))
+      yScale1 .domain(yDomain1 || d3.extent(d3.extent(d3.merge(series1).concat(extraValue1), function(d) { return d.y }).concat(forceY1)))
               .range([0, availableHeight])
 
-      yScale2 .domain(yDomain2 || d3.extent(d3.merge(series2).concat(extraValue2), function(d) { return d.y } ))
+      yScale2 .domain(yDomain2 || d3.extent(d3.extent(d3.merge(series2).concat(extraValue2), function(d) { return d.y }).concat(forceY2)))
               .range([0, availableHeight])
 
       lines1.yDomain(yScale1.domain())
@@ -401,6 +403,18 @@ nv.models.multiChart = function() {
   chart.yDomain2 = function(_) {
     if (!arguments.length) return yDomain2;
     yDomain2 = _;
+    return chart;
+  };
+
+  chart.forceY1 = function(_) {
+    if (!arguments.length) return forceY1;
+    forceY1 = _;
+    return chart;
+  };
+
+  chart.forceY2 = function(_) {
+    if (!arguments.length) return forceY2;
+    forceY2 = _;
     return chart;
   };
 
