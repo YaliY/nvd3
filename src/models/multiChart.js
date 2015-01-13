@@ -16,6 +16,8 @@ nv.models.multiChart = function() {
       },
       x,
       y,
+      forceY1=[],
+      forceY2=[],
       yDomain1,
       yDomain2
       ; //can be accessed via chart.lines.[x/y]Scale()
@@ -31,8 +33,8 @@ nv.models.multiChart = function() {
       lines1 = nv.models.line().yScale(yScale1),
       lines2 = nv.models.line().yScale(yScale2),
 
-      bars1 = nv.models.multiBar().stacked(false).yScale(yScale1),
-      bars2 = nv.models.multiBar().stacked(false).yScale(yScale2),
+      bars1 = nv.models.multiBar().stacked(false).yScale(yScale1).hideable(true),
+      bars2 = nv.models.multiBar().stacked(false).yScale(yScale2).hideable(true),
 
       stack1 = nv.models.stackedArea().yScale(yScale1),
       stack2 = nv.models.stackedArea().yScale(yScale2),
@@ -197,10 +199,10 @@ nv.models.multiChart = function() {
         return a.map(function(aVal,i){return {x: aVal.x, y: aVal.y + b[i].y}})
       }).concat([{x:0, y:0}]) : []
 
-      yScale1 .domain(yDomain1 || d3.extent(d3.merge(series1).concat(extraValue1), function(d) { return d.y } ))
+      yScale1 .domain(yDomain1 || d3.extent(d3.extent(d3.merge(series1).concat(extraValue1), function(d) { return d.y }).concat(forceY1)))
               .range([0, availableHeight])
 
-      yScale2 .domain(yDomain2 || d3.extent(d3.merge(series2).concat(extraValue2), function(d) { return d.y } ))
+      yScale2 .domain(yDomain2 || d3.extent(d3.extent(d3.merge(series2).concat(extraValue2), function(d) { return d.y }).concat(forceY2)))
               .range([0, availableHeight])
 
       lines1.yDomain(yScale1.domain())
@@ -214,11 +216,11 @@ nv.models.multiChart = function() {
       if(dataStack1.length){d3.transition(stack1Wrap).call(stack1);}
       if(dataStack2.length){d3.transition(stack2Wrap).call(stack2);}
 
-      if(dataBars1.length){d3.transition(bars1Wrap).call(bars1);}
-      if(dataBars2.length){d3.transition(bars2Wrap).call(bars2);}
+      d3.transition(bars1Wrap).call(bars1);
+      d3.transition(bars2Wrap).call(bars2);
 
-      if(dataLines1.length){d3.transition(lines1Wrap).call(lines1);}
-      if(dataLines2.length){d3.transition(lines2Wrap).call(lines2);}
+      d3.transition(lines1Wrap).call(lines1);
+      d3.transition(lines2Wrap).call(lines2);
       
 
 
@@ -401,6 +403,18 @@ nv.models.multiChart = function() {
   chart.yDomain2 = function(_) {
     if (!arguments.length) return yDomain2;
     yDomain2 = _;
+    return chart;
+  };
+
+  chart.forceY1 = function(_) {
+    if (!arguments.length) return forceY1;
+    forceY1 = _;
+    return chart;
+  };
+
+  chart.forceY2 = function(_) {
+    if (!arguments.length) return forceY2;
+    forceY2 = _;
     return chart;
   };
 
