@@ -19,7 +19,9 @@ nv.models.multiChart = function() {
       forceY1=[],
       forceY2=[],
       yDomain1,
-      yDomain2
+      yDomain2,
+      interpolate1 = 'linear',
+      interpolate2 = 'linear'
       ; //can be accessed via chart.lines.[x/y]Scale()
 
   //============================================================
@@ -134,7 +136,7 @@ nv.models.multiChart = function() {
       lines1
         .width(availableWidth)
         .height(availableHeight)
-        .interpolate("linear")
+        .interpolate(interpolate1)
         .color(data.map(function(d,i) {
           return d.color || color[i % color.length];
         }).filter(function(d,i) { return !data[i].disabled && data[i].yAxis == 1 && data[i].type == 'line'}));
@@ -142,7 +144,7 @@ nv.models.multiChart = function() {
       lines2
         .width(availableWidth)
         .height(availableHeight)
-        .interpolate("monotone")
+        .interpolate(interpolate2)
         .color(data.map(function(d,i) {
           return d.color || color[i % color.length];
         }).filter(function(d,i) { return !data[i].disabled && data[i].yAxis == 2 && data[i].type == 'line'}));
@@ -415,6 +417,18 @@ nv.models.multiChart = function() {
   chart.forceY2 = function(_) {
     if (!arguments.length) return forceY2;
     forceY2 = _;
+    return chart;
+  };
+
+  chart.interpolate1 = function(_) {
+    if (!arguments.length) return interpolate1;
+    interpolate1 = _;
+    return chart;
+  };
+
+  chart.interpolate2 = function(_) {
+    if (!arguments.length) return interpolate2;
+    interpolate2 = _;
     return chart;
   };
 
