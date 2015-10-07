@@ -12043,6 +12043,14 @@ nv.models.scatterChart = function() {
       // Event Handling/Dispatching (in chart's scope)
       //------------------------------------------------------------
 
+        //init value for pointer-events
+        if(g.select('.nv-point-paths').style('pointer-events') === 'auto'){
+            g.select('.nv-point-paths').style('pointer-events', 'all');
+        }
+        if(g.select('.nv-background') .style('pointer-events') === 'auto'){
+            g.select('.nv-background') .style('pointer-events', 'none');
+        }
+        
       controls.dispatch.on('legendClick', function(d,i) {
         if(d.key == 'Magnify'){
             enableFisheye = d.disabled;

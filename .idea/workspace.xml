@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2306005-1919-4f31-adb4-19f94f79eb1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nv.d3.js" afterPath="$PROJECT_DIR$/nv.d3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nv.d3.min.js" afterPath="$PROJECT_DIR$/nv.d3.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/scatterChart.js" afterPath="$PROJECT_DIR$/src/models/scatterChart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -26,31 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="multiChart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/multiChart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="432" column="4" selection-start-line="432" selection-start-column="4" selection-end-line="432" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56395346">
+            <state vertical-scroll-proportion="-18.74074">
               <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scatterChart.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scatterChart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/scatterChart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="379" column="57" selection-start-line="379" selection-start-column="57" selection-end-line="379" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.40586245">
+              <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -79,8 +67,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-782" />
-    <option name="y" value="-1057" />
+    <option name="x" value="-698" />
+    <option name="y" value="-1005" />
     <option name="width" value="1831" />
     <option name="height" value="1005" />
   </component>
@@ -107,7 +95,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -161,6 +148,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,7 +167,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-782" y="-1057" width="1831" height="1005" extended-state="0" />
+    <frame x="-698" y="-1005" width="1831" height="1005" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -210,6 +198,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/models/multiChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="432" column="4" selection-start-line="432" selection-start-column="4" selection-end-line="432" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/scatterChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="379" column="57" selection-start-line="379" selection-start-column="57" selection-end-line="379" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/multiChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="432" column="4" selection-start-line="432" selection-start-column="4" selection-end-line="432" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/scatterChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="379" column="57" selection-start-line="379" selection-start-column="57" selection-end-line="379" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/multiChart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -258,18 +294,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/scatterChart.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="379" column="57" selection-start-line="379" selection-start-column="57" selection-end-line="379" selection-end-column="57" />
+        <state vertical-scroll-proportion="-18.74074">
+          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/models/scatterChart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56395346">
-          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.40586245">
+          <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
           <folding />
         </state>
       </provider>
