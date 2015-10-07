@@ -30,6 +30,7 @@ nv.models.scatterChart = function() {
     , showControls = !!d3.fisheye
     , fisheye      = 0
     , pauseFisheye = false
+    , enableFisheye = false
     , tooltips     = true
     , tooltipX     = function(key, x, y) { return '<strong>' + x + '</strong>' }
     , tooltipY     = function(key, x, y) { return '<strong>' + y + '</strong>' }
@@ -334,7 +335,7 @@ nv.models.scatterChart = function() {
             .attr('height', availableHeight);
 
         g.select('.nv-background').on('mousemove', updateFisheye);
-        g.select('.nv-background').on('click', function() { pauseFisheye = !pauseFisheye;});
+        g.select('.nv-background').on('click', function() { if(enableFisheye) pauseFisheye = !pauseFisheye;});
         scatter.dispatch.on('elementClick.freezeFisheye', function() {
           pauseFisheye = !pauseFisheye;
         });
@@ -377,6 +378,9 @@ nv.models.scatterChart = function() {
       //------------------------------------------------------------
 
       controls.dispatch.on('legendClick', function(d,i) {
+        if(d.key == 'Magnify'){
+            enableFisheye = d.disabled;
+        }
         d.disabled = !d.disabled;
 
         fisheye = d.disabled ? 0 : 2.5;
